@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="agent" style="font-size: 1.8em; color: #FF4500;"></div>
+<script type="text/javascript" src="constructors.js"></script>
+<script>
+var imf = "Good Morning, Mr. Phelps...your mission, should you decide to accept it.....is to *STOP* Ortega (.....the villian's name is always Ortega.................60s spy TV...............y'know.............................) --and extricate Senator Freemason from the hidden SanfritoLeTostito compound in Guatalatacajonia--as always, should any of your IM force be caught or killed, the Secretary will cash in his frequent flier miles and head for Maui, so you'll be pretty much buggered.......this computer will self-destruct in 5 seconds...good luck, Jim...4...................3...................2...................1................... *!";
+
+function printSentence(id, sentence){
+
+				var index=0;
+				var intObject= setInterval(function() {
+							 document.getElementById(id).innerHTML+=sentence[index];
+							 index++;
+							 if(index==sentence.length){
+										 clearInterval(intObject);
+								}
+						}, 50);
+}
+printSentence('agent', imf);
+</script>
+</body>
+</html>

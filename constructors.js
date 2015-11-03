@@ -37,7 +37,27 @@ function expect(target) {
 // Only add code to *THIS* section!
 
 // ????????
-// ????????
+function Dog(obj) {
+
+  this.color = obj && obj.color ? obj.color : "tan";
+  this.hungry = obj && (obj.hungry !== undefined) ? obj.hungry : true;
+  this.status = "normal";
+
+}
+
+
+// ???????
+function Human(obj) {
+
+  this.cool = obj && obj.cool ? true : false;
+  this.pet = function(targetDog) {
+      targetDog.status = "happy";
+  };
+  this.feed = function(targetDog){
+      targetDog.hungry = false;
+  };
+
+}
 // ????????
 
 
@@ -48,16 +68,15 @@ function expect(target) {
 // \__,_/\____/\__, /____/
 //            /____/
 
-var sadie = new Dog({
-  color: "black",
-  hungry: false
-});
+var sadie = new Dog({ color: "black",  hungry: false });
 
 var moonshine = new Dog({
   color: "blue-red"
 });
 
 var atticus = new Dog();
+
+
 
 
 //     __
