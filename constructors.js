@@ -34,14 +34,58 @@ function expect(target) {
 // / /__/ /_/ / / / (__  ) /_/ /  / /_/ / /__/ /_/ /_/ / /  (__  )
 // \___/\____/_/ /_/____/\__/_/   \__,_/\___/\__/\____/_/  /____/
 //
-// Only add code to *THIS* section!
+//Only add code to *THIS* section!
 
-// ????????
-// ????????
-// ????????
+function Dog(obj) {
+
+  this.color = obj && obj.color ? obj.color : "black";
+/*  
+  if (obj && obj.color) {
+    this.color = obj.color;
+  }
+  else {
+    this.color = "black";
+  }
+*/
+    
+  if (obj && obj.hungry != undefined) {
+    this.hungry = obj.hungry;
+  }
+  else {
+    this.hungry = true;
+  }
+
+  this.status = obj && obj.status ? obj.status : "normal";
 
 
-//        __
+}
+
+
+function Human(obj){
+
+ if( obj && obj.cool  != undefined){
+    this.cool = obj.cool;
+  }
+  else {
+    this.cool = false;
+  }
+
+  this.pet = function(dog){
+    dog.status = "happy";
+  }
+
+  this.feed = function(dog){
+    dog.hungry = false;
+  }
+
+}
+
+
+
+
+
+
+
 //   ____/ /___  ____ ______
 //  / __  / __ \/ __ `/ ___/
 // / /_/ / /_/ / /_/ (__  )
