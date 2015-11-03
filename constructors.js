@@ -36,7 +36,7 @@ function expect(target) {
 //
 // Only add code to *THIS* section!
 function Dog (obj) {
-  this.hungry = obj && obj.hungry === undefined;
+  this.hungry = obj && obj.hungry !== undefined ? obj.hungry : true;
   this.color = obj ? obj.color : 'black';
   this.status = 'normal';
 }
