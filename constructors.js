@@ -35,11 +35,21 @@ function expect(target) {
 // \___/\____/_/ /_/____/\__/_/   \__,_/\___/\__/\____/_/  /____/
 //
 // Only add code to *THIS* section!
+function Dog(obj){
+    this.color = obj ? obj.color : "black";
+    this.status = "normal";
+    this.hungry = obj && obj.hungry !== undefined ? obj.hungry: true;
+       }
 
-// ????????
-// ????????
-// ????????
-
+function Human(obj){
+    this.feed = function(petDog){
+      petDog.hungry = false;
+    };
+    this.pet = function(petDog){
+      petDog.status = "happy";
+    };
+    this.cool = obj ? obj.cool : false;
+    }
 
 //        __
 //   ____/ /___  ____ ______
