@@ -36,8 +36,39 @@ function expect(target) {
 //
 // Only add code to *THIS* section!
 
-// ????????
-// ????????
+function Dog(obj) {
+  
+  this.color=obj? obj.color:"black";
+  this.hungry=obj && obj.hungry !== undefined ? obj.hungry:true;
+  this.status="normal";
+};
+
+
+
+
+function Human(obj) {
+
+  this.cool=obj? obj.cool:false;
+  this.pet=function(targetDog) {
+    targetDog.status="happy";
+  };
+
+  this.feed=function(targetDog) {
+    targetDog.hungry=false;
+  };
+
+  
+};
+
+
+
+
+
+
+
+
+
+
 // ????????
 
 
