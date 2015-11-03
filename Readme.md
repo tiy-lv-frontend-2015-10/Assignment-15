@@ -22,3 +22,6 @@ ___This homework is due by 8am, on 11/03/2015___
 2. Deploy to github pages 
 3. Post a link in your pull request comments to the github pages site.
 
+I would like to clarify the differences in how a ternary works (if , else statement is easy), but the way we got this to work actually assigns a value. Please go over this with me... and there are others who would like to hear this as well.
+
+Thank You!
