@@ -35,10 +35,23 @@ function expect(target) {
 // \___/\____/_/ /_/____/\__/_/   \__,_/\___/\__/\____/_/  /____/
 //
 // Only add code to *THIS* section!
+function Dog (obj) {
+  this.hungry = obj && obj.hungry !== undefined ? obj.hungry : true;
+  this.color = obj ? obj.color : 'black';
+  this.status = 'normal';
+}
 
-// ????????
-// ????????
-// ????????
+function Human (obj) {
+  this.cool = obj ? obj.cool : false;
+
+ this.pet = function(Dog) {
+  Dog.status = 'happy';
+ }
+ this.feed = function(Dog) {
+  Dog.hungry = false;
+ }
+}
+
 
 
 //        __
@@ -53,6 +66,7 @@ var sadie = new Dog({
   hungry: false
 });
 
+
 var moonshine = new Dog({
   color: "blue-red"
 });
@@ -65,6 +79,7 @@ var atticus = new Dog();
 //   / __ \/ / / / __ `__ \/ __ `/ __ \/ ___/
 //  / / / / /_/ / / / / / / /_/ / / / (__  )
 // /_/ /_/\__,_/_/ /_/ /_/\__,_/_/ /_/____/
+
 
 var mason = new Human();
 
@@ -114,3 +129,4 @@ it("should make Julia cool and Mason not cool", function(){
   expect(julia.cool).toBe(true);
   expect(mason.cool).toBe(false);
 });
+
