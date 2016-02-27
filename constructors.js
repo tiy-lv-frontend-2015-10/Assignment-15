@@ -38,7 +38,7 @@ function expect(target) {
 
 function Dog (Object) {
     this.status = "normal";
-    this.color = Object? Object.color:"black";
+    this.color = Object ? Object.color : "black";
     this.hungry = Object && Object.hungry !== undefined ? Object.hungry : true;
    
     
